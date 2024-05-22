@@ -15,7 +15,8 @@ public class MatchRepository : IMatchRepository
         return _context.Matches
                 .Where(m => m.MatchFinished == matchFinished)
                 .OrderBy(m => m.MatchId)
-                .Select(m => new MatchDTOResponse{
+                .Select(m => new MatchDTOResponse
+                {
                     MatchId = m.MatchId,
                     MatchDate = m.MatchDate,
                     MatchTeamAId = m.MatchTeamAId,

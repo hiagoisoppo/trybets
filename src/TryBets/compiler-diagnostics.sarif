@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.8.0.0",
+        "fileVersion": "4.8.0-7.24067.24 (26357112)",
+        "semanticVersion": "4.8.0"
+      },
+      "results": [
+        {
+          "ruleId": "CA1827",
+          "level": "note",
+          "message": "Count() is used where Any() could be used instead to improve performance",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/hiagoisoppo/workdir/csharp-032-csharp-projeto-trybets/src/TryBets/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 13,
+                  "endLine": 17,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "OperationKey": "OperationBinaryLeft"
+            }
+          }
+        },
+        {
+          "ruleId": "CA1827",
+          "level": "note",
+          "message": "Count() is used where Any() could be used instead to improve performance",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/hiagoisoppo/workdir/csharp-032-csharp-projeto-trybets/src/TryBets/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 13,
+                  "endLine": 25,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "OperationKey": "OperationBinaryLeft",
+              "ShouldNegateKey": null
+            }
+          }
+        }
+      ],
+      "rules": {
+        "CA1827": {
+          "id": "CA1827",
+          "shortDescription": "Do not use Count() or LongCount() when Any() can be used",
+          "fullDescription": "For non-empty collections, Count() and LongCount() enumerate the entire sequence, while Any() stops at the first item or the first item that satisfies a condition.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1827",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -15,7 +15,7 @@ public class TryBetsContext : DbContext, ITryBetsContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        var connectionString = "Server=127.0.0.1;Database=Trybets;User=SA;Password=TryBets123456!;TrustServerCertificate=true";
+        var connectionString = "Server=host.docker.internal;Database=Trybets;User=SA;Password=TryBets123456!;TrustServerCertificate=true";
         optionsBuilder.UseSqlServer(connectionString);
     }
 
